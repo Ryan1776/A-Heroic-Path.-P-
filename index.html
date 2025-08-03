@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Heroic Path - A Cinematic Tribute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <button id="start-button">Click to Begin</button>
+    </div>
+
+    <!-- 3D Animated Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Background Music Control -->
+    <div id="audio-control">
+        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+        </svg>
+        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="display: none;">
+            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+        </svg>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/08/04/audio_2bbe63d34a.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="main-content">
+        <header class="hero content-section">
+            <div class="hero-content">
+                <h1 class="hero-title">A Heroic Path</h1>
+                <p class="hero-subtitle">An immersive tribute to the hero's journey.</p>
+            </div>
+            <a href="#video" class="scroll-indicator">
+                <span>Begin the Experience</span>
+                <div class="mouse-wheel"><div class="scroller"></div></div>
+            </a>
+        </header>
+
+        <section id="video" class="content-section">
+            <div class="video-frame-container">
+                <div class="video-frame">
+                    <video class="tribute-video" controls playsinline>
+                        <source src="./Reel/I forgive you ~ Peter Parker.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="content-section">
+            <h2 class="section-title">A Hero's Creed</h2>
+            <div class="quote-container" id="quoteContainer">
+            </div>
+        </section>
+
+        <footer class="content-section">
+            <div class="footer-content">
+                <div class="made-with-love">
+                    Made with <span class="heart">❤</span> for the heroes in all of us.
+                </div>
+                <div class="copyright">
+                    © 2025 Aryan. All Rights Reserved.
+                </div>
+                <p class="disclaimer">
+                    This is a non-commercial, fan-made tribute. All characters and media belong to their respective copyright holders.
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
